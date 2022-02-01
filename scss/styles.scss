@@ -16,6 +16,7 @@
   --button-color: #596d48;
   --logo-font: Norse sans-serif;
   --font-color: #fff;
+  --left-spacing: 3rem;
 }
 
 body {
@@ -29,8 +30,6 @@ body {
 
 .container {
   display: flex;
-  // max-width: 1440px;
-  margin: 0 auto;
 
   .container__background {
     position: relative;
@@ -60,6 +59,7 @@ body {
       position: absolute;
       top: 22%;
       display: flex;
+      justify-content: center;
       align-items: center;
       height: 15%;
       width: 100%;
@@ -74,6 +74,70 @@ body {
       span {
         font: 5rem Norse;
         color: var(--font-color);
+      }
+    }
+  }
+
+  .container__main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .main__heading {
+      width: 60%;
+      padding-left: var(--left-spacing);
+      margin-bottom: 2rem;
+    }
+
+    .main__heading--sub {
+      padding-left: var(--left-spacing);
+      margin-bottom: 3rem;
+    }
+
+    .form__wrapper {
+      padding: 1rem 0 1.5rem var(--left-spacing);
+      margin-bottom: 2rem;
+      box-shadow: 0 5px 5px rgba(0, 0, 50, 0.2);
+
+      .form__heading {
+        margin-bottom: 1.5rem;
+      }
+
+      .field__wrapper {
+        display: flex;
+        gap: 5rem;
+        margin-bottom: 1rem;
+      }
+
+      label {
+        display: block;
+        font-size: 13px;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+      }
+
+      input {
+        width: 18rem;
+        height: 2rem;
+        font-size: 1rem;
+        border: 1px solid var(--input-border-color);
+        border-radius: 5px;
+
+        &.focus {
+          border: 1px solid blue;
+          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        &.error {
+          border: 1px solid red;
+        }
+      }
+
+      .field--password::after {
+        content: "* Passwords do not match";
+        display: block;
+        color: rgb(255, 70, 70);
+        font-size: 13px;
       }
     }
   }
