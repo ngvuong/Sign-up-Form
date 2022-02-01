@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Sign-up Form</title>
+  </head>
+  <body>
+    <main class="container">
+      <section class="container__background">
+        <p class="background__credits">
+          Photo by <span class="credits--name">Haile</span> on
+          <a class="credits--source"> Unsplash</a>
+        </p>
+        <img src="./assets/odin-lined.png" alt="Odin icon and text" />
+      </section>
+      <section class="container--main">
+        <h2 main__heading>
+          This is not a real online service! You know you need something like
+          this in your life to help you realize your deepest dreams. Sign up
+          <em>now</em>
+          to get started.
+        </h2>
+        <h2 main__heading--sub>You <em>know</em> you want to.</h2>
+        <form class="form">
+          <div class="form__wrapper">
+            <h2 class="form__heading">Let's do this!</h2>
+            <input type="text" class="form__input first-name" />
+            <input type="text" class="form__input last-name focus" />
+            <input type="email" class="form__input email" />
+            <input type="tel" class="form__input phone" />
+            <input type="password" class="form__input password error" />
+            <input type="password" class="form__input confirm error" />
+          </div>
+          <button class="btn--submit">Create Account</button>
+          <p class="form__prompt">
+            Already have an account? <a href="#" class="form__link">Log in</a>
+          </p>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
