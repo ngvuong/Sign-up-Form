@@ -4,17 +4,20 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="css/styles.css" />
     <title>Sign-up Form</title>
   </head>
   <body>
     <main class="container">
       <section class="container__background">
         <p class="background__credits">
-          Photo by <span class="credits--name">Haile</span> on
-          <a class="credits--source"> Unsplash</a>
+          Photo by <span class="credits--name">Haile West</span> on
+          <a href="#" class="credits--source"> Unsplash</a>
         </p>
-        <img src="./assets/odin-lined.png" alt="Odin icon and text" />
+        <div class="logo">
+          <img src="./assets/odin-lined.png" alt="Odin icon" />
+          <span>Odin</span>
+        </div>
       </section>
       <section class="container--main">
         <h2 main__heading>
@@ -27,12 +30,30 @@
         <form class="form">
           <div class="form__wrapper">
             <h2 class="form__heading">Let's do this!</h2>
-            <input type="text" class="form__input first-name" />
-            <input type="text" class="form__input last-name focus" />
-            <input type="email" class="form__input email" />
-            <input type="tel" class="form__input phone" />
-            <input type="password" class="form__input password error" />
-            <input type="password" class="form__input confirm error" />
+            <label for="first-name">first name</label>
+            <input type="text" id="first-name" class="form__input first-name" />
+            <label for="last-name">last name</label>
+            <input
+              type="text"
+              id="last-name"
+              class="form__input last-name focus"
+            />
+            <label for="email">email</label>
+            <input type="email" id="email" class="form__input email" />
+            <label for="phone">phone number</label>
+            <input type="tel" id="phone" class="form__input phone" />
+            <label for="password">password</label>
+            <input
+              type="password"
+              id="password"
+              class="form__input password error"
+            />
+            <label for="confirm">confirm password</label>
+            <input
+              type="password"
+              id="confirm"
+              class="form__input confirm error"
+            />
           </div>
           <button class="btn--submit">Create Account</button>
           <p class="form__prompt">

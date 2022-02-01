@@ -1,0 +1,80 @@
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: Norse;
+  src: url(../assets/Norse-Bold.otf);
+}
+
+:root {
+  --input-border-color: #e5e7eb;
+  --button-color: #596d48;
+  --logo-font: Norse sans-serif;
+  --font-color: #fff;
+}
+
+body {
+  font: 16px sans-serif;
+}
+
+@mixin link-style($color, $decor) {
+  text-decoration: $decor;
+  color: $color;
+}
+
+.container {
+  display: flex;
+  // max-width: 1440px;
+  margin: 0 auto;
+
+  .container__background {
+    position: relative;
+    height: 100vh;
+    width: 33%;
+    background-image: url(../assets/bg.jpeg);
+    background-size: cover;
+    background-position: 50%;
+
+    .background__credits {
+      position: absolute;
+      bottom: 1rem;
+      width: 100%;
+      color: var(--font-color);
+      text-align: center;
+      font-size: 13px;
+
+      .credits--name {
+        text-decoration: underline;
+      }
+
+      a {
+        @include link-style(var(--font-color), underline);
+      }
+    }
+    .logo {
+      position: absolute;
+      top: 22%;
+      display: flex;
+      align-items: center;
+      height: 15%;
+      width: 100%;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.3);
+      padding: 1rem;
+
+      img {
+        height: 100%;
+      }
+
+      span {
+        font: 5rem Norse;
+        color: var(--font-color);
+      }
+    }
+  }
+}
