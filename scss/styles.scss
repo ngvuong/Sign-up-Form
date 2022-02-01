@@ -84,7 +84,7 @@ body {
     justify-content: center;
 
     .main__heading {
-      width: 60%;
+      width: 59%;
       padding-left: var(--left-spacing);
       margin-bottom: 2rem;
     }
@@ -95,7 +95,7 @@ body {
     }
 
     .form__wrapper {
-      padding: 1rem 0 1.5rem var(--left-spacing);
+      padding: 1rem 2rem 1.5rem var(--left-spacing);
       margin-bottom: 2rem;
       box-shadow: 0 5px 5px rgba(0, 0, 50, 0.2);
 
@@ -136,9 +136,42 @@ body {
       .field--password::after {
         content: "* Passwords do not match";
         display: block;
-        color: rgb(255, 70, 70);
+        color: #ff4646;
         font-size: 13px;
       }
     }
+
+    .btn--submit {
+      color: var(--font-color);
+      font-weight: bold;
+      font-size: 1rem;
+      background: var(--button-color);
+      padding: 1rem 3rem;
+      margin-left: var(--left-spacing);
+      margin-bottom: 2rem;
+    }
+
+    .form__prompt {
+      margin-left: var(--left-spacing);
+
+      a {
+        @include link-style(var(--button-color), none);
+      }
+    }
+  }
+}
+
+@media (max-width: 1150px) {
+  .container .container__background {
+    width: 50%;
+
+    .logo,
+    .background__credits {
+      display: none;
+    }
+  }
+
+  .container .container__main .field__wrapper input {
+    width: 20vw;
   }
 }
